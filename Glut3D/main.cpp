@@ -293,10 +293,10 @@ void display() {
  */
 int main(int argc, char** argv) {
 	// User commands
-	cout << "Enter a command:" << endl;
-	cout << "(o) Choose what 3D object is drawn on the screen" << endl;
-	cout << "(r) Snap rotation" << endl;
-	cout << "(s) Continuous rotation" << endl;
+	cout << "Controls:" << endl;
+	cout << "(o) Change object" << endl;
+	cout << "(r) Apply snap rotation" << endl;
+	cout << "(s) Apply continuous rotation" << endl;
 
 	// Initialize the glut library
 	glutInit(&argc, argv);
