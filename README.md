@@ -1,4 +1,4 @@
-Glut3D
+<span style="color:green">Glut3D</span>
 ======
 
 Glut3D is a Visual Studio 2017 project intended as a sample reference and guide for OpenGL/GLUT setup and getting started with writing 3D graphics programs.
