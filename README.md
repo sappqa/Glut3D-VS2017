@@ -50,7 +50,7 @@ Note: The controls are handled using `glutKeyboardFunc`, which listens for keybo
 If you get stuck, here are some links that might help.
 
 - [GLUT](https://www.opengl.org/resources/libraries/glut/)
-- [GLUT Setup Tutorial](https://www.youtube.com/watch?v=8p76pJsUP44&t=397s)
+- [GLUT Setup Youtube Tutorial](https://www.youtube.com/watch?v=8p76pJsUP44)
 - [Understanding .lib files](https://stackoverflow.com/questions/3250467/what-is-inside-lib-file-of-static-library-statically-linked-dynamic-library-an)
 
 ## Contribute
