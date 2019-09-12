@@ -31,26 +31,33 @@ Note: The controls are handled using `glutKeyboardFunc`, which listens for keybo
 
 - To the left of the green run button, make sure the build platform is `x86`.
 - Go to `Project -> Properties`
+
 ![projectproperties](https://user-images.githubusercontent.com/26982863/64805540-4a7fa700-d55f-11e9-94e7-c2f477b8ee3b.PNG)
+
 - At the top of the properties window, make sure that the `Platform` is set to `Win32`.
 
 **If we try compiling the code as is (`ctrl+F7`), we will get the following compilation error: `cannot open source file "GL/glut.h"`. Follow these steps to resolve `#include <GL/glut.h>`:**
 
 - Go to `Project -> Properties` again.
 - Navigate to `C/C++ -> General -> Additional Include Directories` and type in `$(SolutionDir)/dependencies/freeglut/include`.
+
 ![cppAddInclude](https://user-images.githubusercontent.com/26982863/64806198-a4cd3780-d560-11e9-98ce-99e539cf287b.PNG)
 
 **Now that the header file has been found, we can compile without any problems! But remember, the header file does not actually contain the function definitions, so we will get a linker error, `cannot open file freeglut.lib` if we try to build the project. So now, we need to link the library `freeglut.lib`.**
 
 - Go back to `Project -> Properties`.
 - Navigate to `Linker -> General -> Additional Library Directories` and type in `$(SolutionDir)/dependencies/freeglut/lib`.
+
 ![linkerLibDir](https://user-images.githubusercontent.com/26982863/64806245-bc0c2500-d560-11e9-8029-893fcff79330.PNG)
+
 - Navigate to `Linker -> Input -> Additional Dependencies` and type in `freeglut.lib`
+
 ![linkerInput](https://user-images.githubusercontent.com/26982863/64806277-cc240480-d560-11e9-81e9-3c199520f476.PNG)
 
 **If `freeglut.lib` was a static library, then we would be done now. However, since it is a dynamic library, this means that it is used to reference the contents of `freeglut.dll`, which contains the actual binary code of everything. The final step is simple:**
 
 - Move `dependencies/freeglut/bin/freeglut.dll` to the `Glut3D` directory.
+
 ![dir](https://user-images.githubusercontent.com/26982863/64806383-07bece80-d561-11e9-81e1-a29a69196275.PNG)
 
 **And that should do it! Try building and running the program!**
