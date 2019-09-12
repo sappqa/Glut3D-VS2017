@@ -2,6 +2,10 @@
 
 Glut3D is a Visual Studio 2017 project intended as a sample reference and guide for OpenGL/GLUT setup and getting started with writing 3D graphics programs.
 
+- [GLUT Setup Tutorial](#glut-setup-tutorial)
+- [Contribute](#contribute)
+- [License](#license)
+
 ## Features
 
 Glut3D provides a console interface where the user can specify a current object and a rotation.
@@ -24,7 +28,7 @@ Note: The controls are handled using `glutKeyboardFunc`, which listens for keybo
 - Right click on the Glut3D project (or click on `Project` in the bar at the top of the window). Then go to `Properties`.
 - At the top of the properties window, make sure that the `Platform` is set to `Win32`.
 
-**If we try compiling the code as is (`ctrl+F7`), we will get the following compilation error: `cannot open source file "GL/glut.h"`. To resolve `#include <GL/glut.h>`:**
+**If we try compiling the code as is (`ctrl+F7`), we will get the following compilation error: `cannot open source file "GL/glut.h"`. Follow these steps to resolve `#include <GL/glut.h>`:**
 
 - Go to `Project -> Properties` again.
 - Navigate to `C/C++ -> General -> Additional Include Directories` and type in `$(SolutionDir)/dependencies/freeglut/include`.
