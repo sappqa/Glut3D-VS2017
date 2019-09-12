@@ -190,13 +190,13 @@ void keyboard(unsigned char key, int x, int y) {
 		askWhichObject();
 		break;
 
-	case 'r':
+	case 's':
 		askWhichAxis();
 		setSnapRotationValues();
 		axis = "";
 		break;
 
-	case 's':
+	case 'r':
 		askWhichAxis();
 		setRotationSpeedValues();
 		axis = "";
@@ -295,8 +295,8 @@ int main(int argc, char** argv) {
 	// User commands
 	cout << "Controls:" << endl;
 	cout << "(o) Change object" << endl;
-	cout << "(r) Apply snap rotation" << endl;
-	cout << "(s) Apply continuous rotation" << endl;
+	cout << "(s) Apply snap rotation" << endl;
+	cout << "(r) Apply continuous rotation" << endl;
 
 	// Initialize the glut library
 	glutInit(&argc, argv);
