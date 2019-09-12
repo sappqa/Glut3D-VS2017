@@ -41,18 +41,11 @@ Note: The controls are handled using `glutKeyboardFunc`, which listens for keybo
 - Go to `Project -> Properties` again.
 - Navigate to `C/C++ -> General -> Additional Include Directories` and type in `$(SolutionDir)/dependencies/freeglut/include`.
 
-![cppAddInclude](https://user-images.githubusercontent.com/26982863/64806198-a4cd3780-d560-11e9-98ce-99e539cf287b.PNG)
-
 **Now that the header file has been found, we can compile without any problems! But remember, the header file does not actually contain the function definitions, so we will get a linker error, `cannot open file freeglut.lib` if we try to build the project. So now, we need to link the library `freeglut.lib`.**
 
 - Go back to `Project -> Properties`.
 - Navigate to `Linker -> General -> Additional Library Directories` and type in `$(SolutionDir)/dependencies/freeglut/lib`.
-
-![linkerLibDir](https://user-images.githubusercontent.com/26982863/64806245-bc0c2500-d560-11e9-8029-893fcff79330.PNG)
-
 - Navigate to `Linker -> Input -> Additional Dependencies` and type in `freeglut.lib`
-
-![linkerInput](https://user-images.githubusercontent.com/26982863/64806277-cc240480-d560-11e9-81e9-3c199520f476.PNG)
 
 **If `freeglut.lib` was a static library, then we would be done now. However, since it is a dynamic library, this means that it is used to reference the contents of `freeglut.dll`, which contains the actual binary code of everything. The final step is simple:**
 
