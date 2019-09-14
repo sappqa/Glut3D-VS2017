@@ -18,7 +18,7 @@ Glut3D provides a console interface where the user can specify a current object 
 ![text](https://user-images.githubusercontent.com/26982863/64800683-0091c380-d555-11e9-828a-e339b77601c4.PNG)
 ![rotated](https://user-images.githubusercontent.com/26982863/64800696-05567780-d555-11e9-8c87-7e8c450fae83.PNG)
 
-Note: The controls are handled using `glutKeyboardFunc`, which listens for keyboard presses and issues a callback. Since this does not involve standard input, your control will not be read if you try to enter it in the console window. The controls must be entered while the display window is selected. Once you have entered a control, then you will be asked to enter input to the console.
+**Note:** The controls are handled using `glutKeyboardFunc`, which listens for keyboard presses and issues a callback. Since this does not involve standard input, your control will not be read if you try to enter it in the console window. The controls must be entered while the display window is selected. Once you have entered a control, then you will be asked to enter input to the console.
 
 ## Installation
 
